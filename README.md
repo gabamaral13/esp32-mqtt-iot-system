@@ -12,6 +12,7 @@ This project is an end-to-end Internet of Things (IoT) solution demonstrating bi
 * **Asynchronous Polling:** Non-blocking message checking (`client.check_msg()`) on the microcontroller ensures continuous sensor monitoring.
 
 ## 🧠 Architecture
+![Hardware Circuit Diagram](mqtt-iot-esp32-circuit.png)
 * **Node 1 (Microcontroller):** Runs MicroPython on an ESP32. Connects to Wi-Fi, reads sensor data (DHT11, Ultrasonic), and publishes to `pucpr/sala1/dados_v2` and `pucpr/sala2/dados_v2`. Subscribes to `pucpr/pc/comandos_v2` to receive actuation commands.
 * **Node 2 (PC Client):** Runs standard Python using `paho-mqtt`. Subscribes to wildcard topics (`pucpr/+/dados_v2`) to monitor multiple rooms/sensors simultaneously. Sends commands (`led_on`, `led_off`, `status`).
 
