@@ -1,0 +1,13 @@
+# Arquivos Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ambientes virtuais do PC
+venv/
+env/
+
+# Configurações de IDE (Thonny, VSCode)
+.vscode/
+.idea/
+.thonny/
